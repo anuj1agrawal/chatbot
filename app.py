@@ -66,7 +66,7 @@ Your task is to perform the following steps and return a single, valid JSON obje
   "explanation": "Your comprehensive correct answer here."
 }}"""
         response = client.chat.completions.create(
-            messages=[{"role": "system", "content": system_prompt}], model="llama3-8b-8192",
+            messages=[{"role": "system", "content": system_prompt}], model="llama-3.1-8b-instant",
             max_tokens=500, temperature=0.7, response_format={"type": "json_object"}, 
         )
         result = json.loads(response.choices[0].message.content)
@@ -95,7 +95,7 @@ def get_system_prompt(phase):
 
 def get_ai_response(messages, system_prompt):
     try:
-        response = client.chat.completions.create(messages=[{"role": "system", "content": system_prompt}, *messages], model="llama3-8b-8192", max_tokens=400, temperature=0.8)
+        response = client.chat.completions.create(messages=[{"role": "system", "content": system_prompt}, *messages], model="llama-3.1-8b-instant", max_tokens=400, temperature=0.8)
         return response.choices[0].message.content
     except Exception:
         return "I'm experiencing some technical difficulties right now. Could we try that again? 😊"
@@ -105,7 +105,7 @@ def generate_technical_questions(tech_stack, experience):
     try:
         experience_level = "entry-level" if float(experience) < 2 else "mid-level" if float(experience) < 5 else "senior-level"
         system_prompt = f"Generate exactly 5 technical questions for a {experience_level} candidate with expertise in: {tech_stack}. Focus on conceptual understanding, design patterns, best practices, and problem-solving. Avoid questions that would require generating multi-line code snippets as an answer. Format as a numbered list."
-        response = client.chat.completions.create(messages=[{"role": "system", "content": system_prompt}], model="llama3-8b-8192", max_tokens=600, temperature=0.7)
+        response = client.chat.completions.create(messages=[{"role": "system", "content": system_prompt}], model="llama-3.1-8b-instant", max_tokens=600, temperature=0.7)
         questions = [line.split('.', 1)[1].strip() for line in response.choices[0].message.content.split('\n') if line and re.match(r'^\d\.', line.strip())]
         return questions[:5] if len(questions) == 5 else fallback_questions
     except Exception:
