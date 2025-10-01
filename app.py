@@ -25,7 +25,7 @@ Respond with only a single word: 'yes' or 'no'."""
 
         response = client.chat.completions.create(
             messages=[{"role": "system", "content": system_prompt}],
-            model="llama3-8b-8192", max_tokens=5, temperature=0.0
+            model="llama-3.1-8b-instant", max_tokens=5, temperature=0.0
         )
         decision = response.choices[0].message.content.strip().lower()
         return "yes" in decision
