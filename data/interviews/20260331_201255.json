@@ -1,0 +1,64 @@
+{
+  "interview_id": "20260331_201255",
+  "timestamp": "2026-03-31T20:12:55.846193",
+  "candidate": {
+    "name": "Anuj Agrawal",
+    "email": "anuj@gmail.com",
+    "phone": "97539593963",
+    "experience": "1",
+    "position": "data scientist",
+    "location": "jaipur",
+    "tech_stack": "python, ml, dl, ai"
+  },
+  "questions": [
+    {
+      "question": "What is the difference between a supervised and unsupervised learning problem?",
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the purpose of the 'fit' and 'predict' methods in a machine learning model?",
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is overfitting in the context of a neural network and how can it be mitigated?",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the difference between a convolutional neural network (CNN) and a recurrent neural network (RNN)?",
+      "difficulty": "medium"
+    },
+    {
+      "question": "How would you implement a simple reinforcement learning agent using Q-learning in Python?",
+      "difficulty": "medium"
+    }
+  ],
+  "answers": [
+    "supervised work with labelled data  that means input and outputs both are given to model, but in unspuervised learning only input data is given model have have to finds pattern in the data and predict future",
+    "dont know",
+    "overfitting is caused when model memorising the data instead of understanding the data. we find that when perfom good in training data and bad in test data. ",
+    "cnn is used for images and videos and while rnn is used for text/ sequestional data",
+    "no"
+  ],
+  "scores": [
+    5.0,
+    2.0,
+    6.0,
+    5.0,
+    1.0
+  ],
+  "summary": {
+    "summary": "Anuj Agrawal, a 1-year data science professional, demonstrated significant knowledge gaps in machine learning concepts, particularly in supervised and unsupervised learning, model evaluation, and neural network optimization. Despite some decent efforts to explain concepts, the candidate's responses lacked depth and technical accuracy. Anuj would benefit from refining his understanding of fundamental ML concepts and practicing more complex problem-solving.",
+    "strengths": [],
+    "improvements": [
+      "Develop a stronger foundation in supervised and unsupervised learning, including their applications and limitations.",
+      "Improve understanding of key ML concepts, such as model evaluation (fit and predict methods) and neural network optimization (overfitting and regularization).",
+      "Enhance problem-solving skills by implementing more complex ML projects, especially with regards to reinforcement learning and Q-learning."
+    ],
+    "recommendation": "no_hire",
+    "next_steps": "Schedule a follow-up discussion with Anuj to discuss areas for improvement and potential additional training or resources to support his growth as a data scientist.",
+    "grade": "F",
+    "percentage": 38.0,
+    "total_score": 19.0,
+    "max_score": 50.0
+  }
+}
